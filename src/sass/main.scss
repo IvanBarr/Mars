@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    .marsWrapper{
+        width: 100%;
+        height: 754px;
+        // height: 600px;
+        // overflow: hidden;
+        position: relative;
+        background-color: darkred;
+        div{
+            position: absolute;
+        }
+        .sky, .mars{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .sky{
+            width: 100%;
+            height: 60%;
+            background-image: url("/images/sky.jpg");
+            background-color: #F1AF73;
+            // img{
+            //     width: 100%;
+            // }
+        }
+        .title{
+            position: absolute;
+            color: white;
+            font-size: 250px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-top: 50px;
+            font-family: 'Roboto', sans-serif;
+            text-shadow: 8px 10px 23px rgba(0,0,0,0.6);
+        }
+        .mars{
+            margin-top: 0;
+            width: 100%;
+            height: 754px;
+            background-image: url("/images/mars2.png");
+    
+            // img{
+            //     width: 100%;
+            // }
+        }
+        .rocket{
+            width: 15%;
+            right: 210px;
+            // top: 122px;
+            top: 270px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.bottomPage{
+    background-color: darkred;
+    color: white;
+    text-align: center;
+}
