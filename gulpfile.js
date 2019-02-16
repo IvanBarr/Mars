@@ -13,6 +13,7 @@ var imagemin    = require('gulp-imagemin');
 var jshint      = require('gulp-jshint');
 var pngquant    = require('imagemin-pngquant');
 var browserSync = require('browser-sync');
+var wait        = require('gulp-wait');
 
 
 var src = {
@@ -23,10 +24,10 @@ var src = {
 };
 
 var build = {
-  js: "build/js",
-  css: "build/css",
-  img: "build/images/",
-  html: "build/*.html",
+  js: "docs/js",
+  css: "docs/css",
+  img: "docs/images/",
+  html: "docs/*.html",
   min_css: 'main.min.css',
   min_js: 'app.min.js'
 };
@@ -42,6 +43,7 @@ gulp.task('sass', function(){
       errorHandler: notify.onError("Error: <%= error.message %>")
     }))
     .pipe(sourcemaps.init())
+    .pipe(wait(100))
     .pipe(sass())
     .pipe(prefix('last 2 versions'))
     .pipe(gulp.dest(src.css))
@@ -82,7 +84,7 @@ gulp.task('img', function(){
 
 gulp.task('watch', function(){
   browserSync.init({
-    server: './build'
+    server: './docs'
   });
   gulp.watch(src.sass, ['sass']);
   gulp.watch(src.js, ['js']);
