@@ -24,8 +24,6 @@ $mainFont: 'Roboto', sans-serif;;
     .marsWrapper{
         width: 100%;
         height: 754px;
-        // height: 600px;
-        // overflow: hidden;
         position: relative;
         background-color: $brown;
         div{
@@ -41,9 +39,6 @@ $mainFont: 'Roboto', sans-serif;;
             height: 60%;
             background-image: url("../images/sky.jpg");
             background-color: $skyColor;
-            // img{
-            //     width: 100%;
-            // }
         }
         .title{
             position: absolute;
@@ -56,20 +51,15 @@ $mainFont: 'Roboto', sans-serif;;
             text-shadow: 8px 10px 23px rgba(0,0,0,0.6);
         }
         .mars{
-            margin-top: 0;
             width: 100%;
-            height: 754px;
-            background-image: url("../images/mars2.png");
-    
-            // img{
-            //     width: 100%;
-            // }
+            height: 793px;
+            background-image: url("../images/mars.png");
+            background-position: center -42px;
         }
         .rocket{
-            width: 15%;
+            width: 250px;
             right: 210px;
-            // top: 122px;
-            top: 270px;
+            top: 240px;
             img{
                 width: 100%;
             }
@@ -81,11 +71,11 @@ $mainFont: 'Roboto', sans-serif;;
         padding-top: 40px;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin-top: -1px; 
         .planet_mars{
             position: relative;
             top: -55px;
             left: 100px;
-            // float: left;
             transform: rotate(0);
             transform-origin: center;
             animation: rotate 25s linear infinite;
@@ -98,11 +88,11 @@ $mainFont: 'Roboto', sans-serif;;
         .desc{
             width: 100%;
             color: $white;
-            // margin-top: 150px;
             font-family: 'Roboto', sans-serif;
             grid-column: 2/3;
             margin-top: 70px;
             h1{
+                padding-bottom: 20px;
                 font-size: 80px;
             }
             p{
@@ -110,19 +100,21 @@ $mainFont: 'Roboto', sans-serif;;
             }
         }
     }
-    .reserveSpot{
+    .reserve_spot{
         background-image: url("../images/formBg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         overflow: hidden;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin-top: -2px;
         h1{
             grid-column: 1/3;
             color: $white;
             font-size: 80px;
             font-family: $mainFont;
             padding: 150px 0 0 150px;
+            letter-spacing: 4px;
         }
         form{
             width: 100%;
@@ -162,11 +154,25 @@ $mainFont: 'Roboto', sans-serif;;
         }
         .astronaut{
             grid-column: 2/3;
+            margin-top: 40px;
             img{
                 padding-bottom: 50px;
                 display: block;
                 margin: 0 auto;
             }
+        }
+    }
+    footer{
+        padding: 30px 0;
+        text-align: center;
+        background-color: $darkbrown;
+        color: white;
+        font-family: $mainFont;
+        a{
+            color: black;
+        }
+        a:visited{
+            color: black;
         }
     }
 }
